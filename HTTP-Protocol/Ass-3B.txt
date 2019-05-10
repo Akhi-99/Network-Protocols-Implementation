@@ -1,0 +1,59 @@
+The coding should be done using C++ in Linux Systems. You should test your code in Systems available in SSL Lab and make sure that it works in those systems before uploading the code. Only codes working in SSL machines need to be uploaded. No provision will be there to take code from other sources.
+--
+
+Server should be opening the predefined port number "80" and would be waiting for multiple HTTP connections from the client side. Clients will run in the same system.
+
+Each client program would be initiating a HTTP request from a persistent TCP connection to the server system.   
+
+The client program is capable of initiating the following HTTP Methods to the server. 
+
+GET “RELATIVE_URL”
+
+The GET method is used to retrieve contents from the server using a given URI.
+
+Requests using GET should only retrieve data and should have no other effect on the data. 
+
+If the client initiates “GET /xyz/abc.txt HTTP/1.1”, then the server should send back the contents of the file abc.txt in the xyz directory to the client which will be displayed in the client terminal.
+
+If the client initiates “GET   /   HTTP/1.1”, then the server should by default send back the contents of the file “index.html” to be displayed  in the client terminal.
+
+
+All these contents from the server’s home directory, should be preceded by appropriate meta information as stated below:
+
+“HTTP/1.1 200 ok” if the file is found.
+
+“HTTP/1.1 404” if the file is not found.
+
+“HTTP/1.1 400” for Bad Request from client.
+
+“HTTP/1.1 403” for accessing Forbidden (explained in next sentence) contents. 
+
+We define forbidden files as those whose names start with 11 and request to those files are considered as forbidden.
+
+“HTTP/1.1 405” Method Not allowed, if the client request any other methods apart from the defined methods.
+
+HEAD
+
+The HEAD method is functionally similar to GET, except that the server replies with the meta information line as above followed by the last modification time of the file (if the file exists).
+
+PUT
+
+Uploads a file from client to server and replaces if it already exists on the server. 
+
+DELETE
+
+Deletes the target resource given by a URI on the server, if it exists.
+
+Multiple clients should be able to connect to the server and be able to send request to the server simultaneously.  
+
+RELATIVE_URL: The client and the server process runs in the same systems, so the RELATIVE URL for root is / and for a file “ABC.html” in “TXT” folder is “TXT/ABC.html”. 
+
+You must test your code thoroughly before uploading. Each client and server may be started from different individual directories. All clients will be connecting to port 80 of the server only. For any query regarding this you may contact Jai Sooraj before Saturday 5PM.
+
+Reference for normal understanding of HTTP options could be taken from https://www.tutorialspoint.com/http/http_methods.htm
+
+Hint: It may be a good idea to work on your current FTP code and modify the same rather than depending on sources like
+
+ https://kukuruku.co/post/lightweight-http-server-in-less-than-40-lines-on-libevent-and-c-11/
+
+

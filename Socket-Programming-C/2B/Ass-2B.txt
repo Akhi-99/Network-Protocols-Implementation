@@ -1,0 +1,20 @@
+User input is a file containing many NITC roll numbers each one in a new line saved as “RollC.txt”.
+
+This file is sent to the server through the socket connected. The file contains many roll numbers of the format (B160nnnCS).
+
+At server side, the server reads user’s input from the client socket and saves into a file “RollS.txt” - server needs to first create the file. 	 	
+
+Once the file is created, the server program reads just the first roll number in the file and takes only numerals from it (for example B160532CS will result in 160532) and sends it back to the client.
+
+The client will save the received data (just one number) into a file called “NumberC.txt” - the client needs to first create this file.
+
+While the input at the client’s end is a file with many NITC roll numbers in it,  the output is a file again at the client’s end having just the numerals of the first roll number of the input file.
+
+You must solve this assignment individually. 
+
+Coding must be done in C and the file compiled using gcc in Ubuntu.
+
+You must submit a single file containing both client and server side code in eduserver. 
+
+Name the file as <student first name>-2B.c
+

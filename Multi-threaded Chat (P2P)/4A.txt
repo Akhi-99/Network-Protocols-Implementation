@@ -1,0 +1,2 @@
+1.https://www.geeksforgeeks.org/socket-programming-in-java/
+2.https://www.geeksforgeeks.org/introducing-threads-socket-programming-java/

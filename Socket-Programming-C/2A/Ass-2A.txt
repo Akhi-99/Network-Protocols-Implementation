@@ -1,0 +1,27 @@
+Socket Programming
+
+Build a client-server socket program with the client making chat to the server. The protocol between the client and server is given by the following:
+
+Server is first started on a known port.
+
+Client program is started next and the client connects to server which then
+
+asks the user for input.
+
+User message is typed on the terminal such as ‘Hello:Roll Number’
+
+(your individual number) and user input is sent to the server through
+
+the socket connected.
+
+The server reads user’s input from the client socket and checks whether the roll number is indeed his/hers. If the user has typed message ‘Hello:xxxxxxxxx’ correctly - with the student's correct roll number, the server must reply with ‘This number belongs to NITC S6/S8 batch’. For any other message server must reply with ‘Ok’.
+
+Client then reads the reply from the server and checks it -  either it is ‘This number belongs to NITC S6/S8 batch’ or ‘Ok’.
+
+If the user had typed ‘Hello:Roll Number’ and server had replied with ‘This number belongs to NITC S6/S8 batch’, client quits correctly. Otherwise the client asks the user for the next message to be sent to the server.
+
+You must solve this assignment individually. 
+
+Coding must be done in C and the file compiled using gcc in Ubuntu.
+
+You must submit a single file containing both client and server side code in eduserver. Name the file as <student first name>-2A.c

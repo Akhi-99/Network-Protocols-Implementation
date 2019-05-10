@@ -1,0 +1,22 @@
+1.https://www.geeksforgeeks.org/multi-threaded-chat-application-set-1/
+2.https://www.geeksforgeeks.org/multi-threaded-chat-application-set-2/
+
+
+First go through the server side and client side of this multithreaded (with server) chat application.
+
+Get them to compile in your laptop and try to debug the code and make it working by resolving error, if any. You should study the code too.
+
+Once you understand this code, look at ours, and find out one modification we have done. You must get this modified code running in your laptop.
+
+Now try yourself to have the following additional modification on the above modified code :
+
+Run this modified client / server and check if it is possible for a client to send a message to itself. If so, we would like to prevent this functionality. Modify the (already modified) server / client code to ensure that no client will send a message to itself.
+
+Ensure that you have the working version of these codes [modification done on the modified code given by us, working in your laptop] with you.
+
+You may upload this final client code and the server code in eduserver. You will be further modifying this in your laptop druing the exam. So please ensure that you have the working versions of them to begin with. 
+
+The client side code should be named <student first name>-4Bclient.java and server side code should be named <student first name>-4Bserver.java
+
+Upload both these files to eduserver before the deadline. Late submissions will be penalised. You will not be permitted to write the exam, if you do not have the proper working code uploaded.
+

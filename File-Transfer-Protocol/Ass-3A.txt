@@ -1,0 +1,26 @@
+Server should be opening the predefined port number "20021" and would be waiting for a connection from the client side, which is running in the same system.
+
+
+The client program will be initiating a connection to the predefined port 20021 of the server. This connection would be used for sending the command / control statements between each other. Various commands that a client could give to the server are listed below.
+
+
+CONN XXXXX: The server instructs the client system to connect to port number XXXXX, by sending the command CONN XXXXX to the client. This would be done once the server needs to send any file or message to the client systems. In our example, XXXXX may correspond to 20020 or 20023 as the case may be.
+
+
+RETR FILENAME: This command causes the server to initiate a data connection to the client system at Server Port number 20020 and to send the requested file over this data connection to the client system. The client and server would be closing the data connection at port 20020 as the file gets transferred successfully. 
+
+
+If the file is not present in the current directory of the server, the server will instruct the client to connect to server’s port number 20023 (which is explained later) and will send an ERROR Message "<SERVER TIME>: FILE NOT FOUND AT CURRENT WORKING DIRECTORY" and closes the connection (to 20023).
+
+
+The server may receive commands from client via command / control channel, even when it is transferring an earlier requested file via port number 20020, or while it is sending a message via port number 20023. This means the server should be able to respond to requests from more than one client [multiple active instances of the same client code] simultaneously and without errors.
+
+
+GOODBYE SERVER: Once the client issues this command, the server terminates any active file transfer via Port 20020 and will will send message "THANK YOU, ALL CONNECTIONS SUCCESSFULLY TERMINATED" to the client via command / control channel established in port 20021. The server closes the connections in 20021 and 20023 if they exist.  
+You must solve this assignment individually. 
+
+Coding must be done in C++ and the file compiled using g++ in Ubuntu.
+
+You must submit a single file containing both client and server side code in eduserver. 
+
+Name the file as <student first name>-3A.cpp

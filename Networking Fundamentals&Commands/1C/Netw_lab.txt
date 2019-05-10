@@ -1,0 +1,50 @@
+The tcpdump command lets you dump traffic on a network. tcpdump prints out the headers of packets on a network interface that match the boolean expression. 
+
+It can also be run with the -w flag, which causes it to save the packet data to a file for later analysis, and/or with the -r flag, which causes it to read from a saved packet file rather than to read packets from a network interface.  
+
+Check the details in the three links given at the end.
+
+You should be familiar with tcpdump Command Syntax, its filtering options and other options. In the viva, you should be able to answer the following questions [and more similar ones]
+
+How to use tcpdump?
+How to make tcpdump exit after receiving set number of packets?
+How to make tcpdump display link-level header in output?
+How to make tcpdump display foreign IP addresses numerically?
+How to make tcpdump produce packet numbers in output?
+How to make tcpdump print shorter output?
+How to omit timestamp info from tcpdump output?
+How to make tcpdump produce detailed output?
+What does the following commands do?
+tcpdump -i eth0
+tcpdump -c 5 -i eth0
+tcpdump -A -i eth0
+tcpdump -D
+tcpdump -XX -i eth0
+tcpdump -w 0001.pcap -i eth0
+tcpdump -r 0001.pcap
+tcpdump -n -i eth0
+tcpdump -i eth0 tcp
+tcpdump -i eth0 port 22
+tcpdump -i eth0 src 192.168.0.2
+tcpdump -i eth0 dst 50.116.66.139  
+You should study the utility in depth and submit a single pdf file as required.
+
+Save the following traffic to two files using tcpdump for later analysis.
+
+Using your data connection, attempt to book a ticket in irctc. Reach till you have to make payment - choose netbanking and sbi in it - and then if you really don't want to book, just attempt to login to sbi with a wrong userid/password and then quit. 
+
+Using NITC connection, login to  the dss website and check your registration details.
+
+From the first file, using tcpdump, first get the dns request and response packets. Next print on terminal the packet data where the connection is to the sbi. just those packets in ascci mode with packet numbers. get the screenshot of the terminal windows which shows the [last part of the] output of the commands you have crafted for these two purposes.
+
+From the second file, capture the user id and password in your communication to the dss. You should craft your tcpdump query to analyze  only the packets to dss and then may use grep with the corresponding filters to get the host name, user id, password required.
+
+The pdf file with the three screenshots [two from the first and one from the second] of the terminal windows should be named as <FirstName>-1C.pdf for example ivan-1C.pdf
+
+Deadline 9PM on Sunday 6th Jan 2019.
+
+Reference
+
+1. https://www.howtoforge.com/linux-tcpdump-command/
+2. https://www.lifewire.com/tcpdump-linux-command-unix-command-4097081
+3. https://www.tecmint.com/12-tcpdump-commands-a-network-sniffer-tool/

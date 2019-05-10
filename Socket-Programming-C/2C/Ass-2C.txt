@@ -1,0 +1,18 @@
+User input is a Text file containing many NITC roll numbers each one in a new line saved as “RollS.txt”. No need to check the validity of roll numbers, they will be as per format.
+
+
+The server program has to be started from a terminal and would be waiting for two different client connections in two different predefined ports (of your choice). The server program doesn’t read any input from the user. It interacts only with two client programs.
+
+
+Two client programs have to be started in two different terminals, and will be connecting to the same server program. The client programs <YourFirstName>_C1.c and <YourFirstName>_C2.c would be opening either “RollNumberC1.txt” or “RollNumberC2.txt” respectively.
+
+
+Once any one of the client presses an “ENTER” key in the client terminal, the server has to open the file “RollS.txt”, read the first Roll No., send that roll number to the corresponding client, and delete it from the file “RollS.txt” and has to close the file “RollS.txt”.
+
+
+The client has to receive the roll number sent from the server, open its corresponding text file (“RollNumberC1.txt” or “RollNumberC2.txt”), save the received roll number in the text file, and close the file.
+
+
+If at any point of time, RollS.txt becomes empty, server will close the corresponding connection – the client which requested the data transfer.
+
+ 

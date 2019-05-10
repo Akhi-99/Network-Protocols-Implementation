@@ -1,0 +1,20 @@
+You must read, study, practice with different options the commands detailed in the pages
+
+https://likegeeks.com/linux-network-commands/   [you may ignore the mtr command]
+
+and the netcat details in 
+
+https://www.unixmen.com/play-with-netcat-in-ubuntu/
+
+Necessary installations may be made.  A thorough read of the man pages is expected before you run these commands with multiple options - not just the ones mentioned in the links.
+
+--
+You must do these commands and their possible variations in your latop [do make installations where necessary]. The terminal header should have your name and date / time so that the screenshots will be easily identifiable.
+
+You should submit a pdf file where you will embed the screenshots of 
+
+1. ifconfig [in your laptop]
+
+2. traceroute - tracepath is not enough and you must try to connect through your service provider [data hotspot] and not through NITC internet. you may connect to any of the servers like google.com / nitc.ac.in etc. and include the screenshot
+
+2. Chat server using netcat (One screenshot similar to Figure 6 in the second link above - let there be more text in chat)
